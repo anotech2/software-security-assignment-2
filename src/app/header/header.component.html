@@ -1,0 +1,8 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand">Google File Uploader</a>
+
+    <div class="form-inline">
+        <a href="" *ngIf="loggedIn===false" (click)="signInWithGoogle()">Login</a>
+        <a href="" *ngIf="loggedIn===true" (click)="signOut()">Logout</a>
+      </div>
+  </nav>

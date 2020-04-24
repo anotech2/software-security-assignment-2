@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row justify-content-md-center align-items-center full-height" *ngIf="loggedIn===false">
+        <div class="col col-md-6">
+            <div class="card">
+                <div class="card-header">
+                  Login
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Login with your google account to get started</p>
+                  <button class="btn btn-outline-primary btn-block" (click)="signInWithGoogle()">
+                    <i class="fab fa-google"></i>
+                      Login
+                    </button>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="loggedIn===true">
+        <div class="col col-md-16">
+
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, {{user.firstName}}!</h1>
+                <p class="lead">This is a simple Google Drive File Upload App</p>
+                <hr class="my-4">
+                <p></p>
+                <p class="lead">
+                  <a class="btn btn-primary btn-lg" href="#" role="button">Start Uploading</a>
+                </p>
+              </div>
+        </div>
+        
+    </div>
+</div>
+
